@@ -2,7 +2,6 @@
 This Repository contain basics of ROS2.
 📚 Course Overview
 This course is designed to teach you ROS2 Humble from scratch, starting with fundamentals and progressing to advanced robotics applications.
-Quick Links
 
 📖 Complete Documentation
 🔗 Official ROS2 Repository
@@ -10,7 +9,10 @@ Quick Links
 
 
 📅 Course Structure
-WeekTopicStatusWeek 1ROS2 Basics & Installation✅ CurrentWeek 2Creating ROS2 Packages🔜 Coming SoonWeek 3Nodes: Publishers & Subscribers🔜 Coming SoonWeek 4Services & Actions🔜 Coming SoonWeek 5Launch Files & Parameters🔜 Coming SoonWeek 6-10Advanced Topics & Projects🔜 Coming Soon
+WeekTopicStatusWeek 1ROS2 Basics & Installation✅ 
+CurrentWeek 2Creating ROS2 Packages🔜
+Coming SoonWeek 3Nodes: Publishers & Subscribers🔜 Coming SoonWeek 4Services & Actions🔜 Coming SoonWeek 5Launch Files & Parameters🔜 Coming SoonWeek 6-10Advanced Topics & Projects🔜 Coming Soon
+
 
 🎯 WEEK 1: ROS2 Basics & Installation
 Duration: 7 days | Level: Beginner | Prerequisites: Basic Linux knowledge, Ubuntu 22.04 LTS
@@ -24,35 +26,18 @@ A language robots use to communicate (like English for humans)
 A toolkit for building robot applications (like Arduino IDE for microcontrollers)
 A middleman between sensors and actuators (translates sensor data → motor commands)
 
-🏗️ ROS2 Architecture
-┌─────────────────────────────────────────┐
-│          ROS2 Architecture              │
-├─────────────────────────────────────────┤
-│                                         │
-│  ┌──────────────┐    ┌──────────────┐  │
-│  │   Sensors    │    │   Actuators  │  │
-│  │ (Camera, IMU)│    │(Motors, Pump)│  │
-│  └──────┬───────┘    └───────┬──────┘  │
-│         │                    │         │
-│         ├────────────────────┤         │
-│         │   ROS2 Framework   │         │
-│         │  (DDS Middleware)  │         │
-│         │                    │         │
-│  ┌──────┴──────┐  ┌──────────┴──────┐  │
-│  │   Nodes     │  │   Topics        │  │
-│  │(C++, Python)│  │(Communication)  │  │
-│  └─────────────┘  └─────────────────┘  │
-│                                         │
-│  ┌──────────────────────────────────┐  │
-│  │  Tools: RViz2, rqt, ros2 CLI     │  │
-│  │         Launch, Bag, Simulation  │  │
-│  └──────────────────────────────────┘  │
-│                                         │
-└─────────────────────────────────────────┘
-
 ✨ Why Choose ROS2?
 🆚 ROS1 vs ROS2 Comparison
-FeatureROS1ROS2WinnerMiddlewareCustom (roscore)DDS (industry standard)✅ ROS2Real-time SupportLimitedFull support✅ ROS2Multi-robotDifficultNative support✅ ROS2Network SecurityWeakBuilt-in encryption✅ ROS2Scalability~50 nodes1000+ nodes✅ ROS2Multi-OSLinux onlyLinux, Windows, macOS✅ ROS2Language SupportC++, PythonC++, Python, Java, C#, Rust✅ ROS2Learning CurveSteepModerate✅ ROS2Production ReadyYesYes✅ Tie
+Feature ROS1 ROS2 Winner Middleware Custom (roscore)DDS (industry standard)
+✅ ROS2 Real-time Support Limited Full support
+✅ ROS2 Multi-robotDifficultNative support
+✅ ROS2 Network Security Weak Built-in encryption
+✅ ROS2 Scalability~50 nodes1000+ nodes
+✅ ROS2 Multi-OSLinux onlyLinux, Windows, macOS
+✅ ROS2 Language SupportC++, PythonC++, Python, Java, C#, Rust
+✅ ROS2Learning CurveSteep Moderate
+✅ ROS2Production ReadyYes Yes
+✅ Tie
 🎯 Top 8 Advantages of ROS2
 1️⃣ Decentralized Architecture (DDS)
 ROS1:
