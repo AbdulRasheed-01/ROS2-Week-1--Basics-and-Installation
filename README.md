@@ -79,6 +79,24 @@ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o
 # Add repository to sources list
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
+Step 3: Install ROS 2 Humble
 
+# Update and install
+sudo apt update
 
+sudo apt install ros-humble-desktop
+
+# Source ROS 2 in your shell
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+
+source ~/.bashrc
+
+# Install development tools
+sudo apt install python3-colcon-common-extensions python3-rosdep2
+
+sudo rosdep init
+
+rosdep update
+
+Step 4: Verify Installation
 
