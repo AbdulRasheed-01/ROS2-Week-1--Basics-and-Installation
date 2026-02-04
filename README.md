@@ -48,3 +48,15 @@ Services - Request/response communication
 Actions - Long-running tasks with feedback
 
 
+⚙️ Installation Guide
+Step 1: System Setup
+
+# Update system
+sudo apt update && sudo apt upgrade -y
+
+# Set locale
+sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
