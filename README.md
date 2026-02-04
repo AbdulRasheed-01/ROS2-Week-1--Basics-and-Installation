@@ -26,3 +26,13 @@ Hardware abstraction
 Package management
 
 Development tools
+
+ROS 2 vs ROS 1: Key Differences
+
+Feature	          ROS 1	            ROS 2
+Middleware	      Custom TCPROS	    DDS (Data Distribution Service)
+Real-time	        Limited support	  Excellent support
+Network	          Master-based	    Discovery-based
+Cross-platform    Limited	          Windows, macOS, Linux
+QoS Policies	    Basic	            Advanced control
+
