@@ -166,14 +166,15 @@ Example 1: Simple Publisher (Python)
 
 Create simple_publisher.py:
 
-#!/usr/bin/env python3
-import rclpy
+    #!/usr/bin/env python3
 
-from rclpy.node import Node
+    import rclpy
 
-from std_msgs.msg import String
+    from rclpy.node import Node
 
-class SimplePublisher(Node):
+    from std_msgs.msg import String
+
+    class SimplePublisher(Node):
 
     def __init__(self):
     
@@ -193,8 +194,9 @@ class SimplePublisher(Node):
         self.publisher.publish(msg)
         self.get_logger().info(f'Publishing: "{msg.data}"')
         self.counter += 1
+        
 
-def main(args=None):
+    def main(args=None):
 
     rclpy.init(args=args)
     
@@ -212,21 +214,21 @@ def main(args=None):
     
     rclpy.shutdown()
 
-if __name__ == '__main__':
+    if __name__ == '__main__':
 
     main()
 
 Example 2: Simple Subscriber (Python)
 
-#!/usr/bin/env python3
+    #!/usr/bin/env python3
 
-import rclpy
+    import rclpy
 
-from rclpy.node import Node
+    from rclpy.node import Node
 
-from std_msgs.msg import String
+    from std_msgs.msg import String
 
-class SimpleSubscriber(Node):
+    class SimpleSubscriber(Node):
 
     def __init__(self):
     
@@ -242,9 +244,9 @@ class SimpleSubscriber(Node):
     
         self.get_logger().info(f'I heard: "{msg.data}"')
 
-def main(args=None):
-    rclpy.init(args=args)
-    node = SimpleSubscriber()
+    def main(args=None):
+        rclpy.init(args=args)
+        node = SimpleSubscriber()
     
     try:
     
@@ -258,7 +260,7 @@ def main(args=None):
     
     rclpy.shutdown()
 
-if __name__ == '__main__':
+    if __name__ == '__main__':
 
     main()
 
