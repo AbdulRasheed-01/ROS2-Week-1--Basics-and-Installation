@@ -100,3 +100,16 @@ rosdep update
 
 Step 4: Verify Installation
 
+# Test ROS 2 installation
+printenv | grep ROS
+
+# Should show:
+ROS_VERSION=2
+
+ROS_PYTHON_VERSION=3
+
+ROS_DISTRO=humble
+
+# Test a simple command
+ros2 --help
+
