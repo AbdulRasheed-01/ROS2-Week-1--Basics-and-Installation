@@ -168,7 +168,9 @@ Create simple_publisher.py:
 
 #!/usr/bin/env python3
 import rclpy
+
 from rclpy.node import Node
+
 from std_msgs.msg import String
 
 class SimplePublisher(Node):
@@ -204,8 +206,11 @@ if __name__ == '__main__':
 Example 2: Simple Subscriber (Python)
 
 #!/usr/bin/env python3
+
 import rclpy
+
 from rclpy.node import Node
+
 from std_msgs.msg import String
 
 class SimpleSubscriber(Node):
