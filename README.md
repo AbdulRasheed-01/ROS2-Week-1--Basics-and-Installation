@@ -35,3 +35,16 @@ Improved performance and security
 
 Better documentation and community support
 
+Core Components:
+
+Nodes - Individual programs/processes
+
+Topics - Named buses for message passing
+
+Messages - Data structures passed between nodes
+
+Services - Request/response communication
+
+Actions - Long-running tasks with feedback
+
+
