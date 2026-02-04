@@ -14,3 +14,15 @@ By the end of this week, you will be able to:
 ✅ Understand basic ROS 2 concepts (Nodes, Topics, Messages)
 
 ✅ Create and run a simple publisher-subscriber system
+
+📚 Theory Content
+1.1 What is ROS 2?
+ROS (Robot Operating System) is not an actual operating system but a middleware framework that provides:
+
+Communication tools for robots
+
+Hardware abstraction
+
+Package management
+
+Development tools
