@@ -27,12 +27,11 @@ Package management
 
 Development tools
 
-ROS 2 vs ROS 1: Key Differences
+Why ROS 2 Humble?
 
-Feature	          ROS 1	            ROS 2
-Middleware	      Custom TCPROS	    DDS (Data Distribution Service)
-Real-time	        Limited support	  Excellent support
-Network	          Master-based	    Discovery-based
-Cross-platform    Limited	          Windows, macOS, Linux
-QoS Policies	    Basic	            Advanced control
+Latest LTS (Long Term Support) version
+
+Improved performance and security
+
+Better documentation and community support
 
