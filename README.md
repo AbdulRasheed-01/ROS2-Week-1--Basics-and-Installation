@@ -113,3 +113,133 @@ ROS_DISTRO=humble
 # Test a simple command
 ros2 --help
 
+🔧 Hands-On Practice
+Exercise 1: Your First ROS 2 Commands
+
+Open Terminal 1:
+
+# Start ROS 2 demo talker (publisher)
+ros2 run demo_nodes_cpp talker
+
+Open Terminal 2:
+
+# Start ROS 2 demo listener (subscriber)
+ros2 run demo_nodes_cpp listener
+
+Expected Output:
+
+Terminal 1: Publishing "Hello World" messages
+
+Terminal 2: Receiving and displaying messages
+
+Exercise 2: Explore ROS 2 Graph
+
+# List all active nodes
+ros2 node list
+
+# List all topics
+ros2 topic list
+
+# Echo messages from a topic
+ros2 topic echo /chatter
+
+# Get topic info
+ros2 topic info /chatter
+
+# Get message type
+ros2 topic type /chatter
+
+Exercise 3: Understanding Topics
+
+# See data being published in real-time
+ros2 topic hz /chatter
+
+# See message bandwidth
+ros2 topic bw /chatter
+
+# Publish a custom message
+ros2 topic pub /chatter std_msgs/msg/String "data: 'Hello from CLI!'"
+
+💻 Code Examples
+
+Example 1: Simple Publisher (Python)
+
+Create simple_publisher.py:
+
+#!/usr/bin/env python3
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+
+class SimplePublisher(Node):
+    def __init__(self):
+        super().__init__('simple_publisher')
+        self.publisher = self.create_publisher(String, 'greeting', 10)
+        timer_period = 2.0  # seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+        self.counter = 0
+    
+    def timer_callback(self):
+        msg = String()
+        msg.data = f'Hello ROS 2! Count: {self.counter}'
+        self.publisher.publish(msg)
+        self.get_logger().info(f'Publishing: "{msg.data}"')
+        self.counter += 1
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = SimplePublisher()
+    
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+
+Example 2: Simple Subscriber (Python)
+
+#!/usr/bin/env python3
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+
+class SimpleSubscriber(Node):
+    def __init__(self):
+        super().__init__('simple_subscriber')
+        self.subscription = self.create_subscription(
+            String,
+            'greeting',
+            self.listener_callback,
+            10)
+    
+    def listener_callback(self, msg):
+        self.get_logger().info(f'I heard: "{msg.data}"')
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = SimpleSubscriber()
+    
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+
+
+Running the Examples
+
+# Terminal 1: Run publisher
+python3 simple_publisher.py
+
+# Terminal 2: Run subscriber
+python3 simple_subscriber.py
