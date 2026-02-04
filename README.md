@@ -174,11 +174,17 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 class SimplePublisher(Node):
+
     def __init__(self):
+    
         super().__init__('simple_publisher')
+        
         self.publisher = self.create_publisher(String, 'greeting', 10)
+        
         timer_period = 2.0  # seconds
+        
         self.timer = self.create_timer(timer_period, self.timer_callback)
+        
         self.counter = 0
     
     def timer_callback(self):
@@ -189,18 +195,25 @@ class SimplePublisher(Node):
         self.counter += 1
 
 def main(args=None):
+
     rclpy.init(args=args)
+    
     node = SimplePublisher()
     
     try:
+    
         rclpy.spin(node)
+        
     except KeyboardInterrupt:
+    
         pass
     
     node.destroy_node()
+    
     rclpy.shutdown()
 
 if __name__ == '__main__':
+
     main()
 
 Example 2: Simple Subscriber (Python)
@@ -214,8 +227,11 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 class SimpleSubscriber(Node):
+
     def __init__(self):
+    
         super().__init__('simple_subscriber')
+        
         self.subscription = self.create_subscription(
             String,
             'greeting',
@@ -223,6 +239,7 @@ class SimpleSubscriber(Node):
             10)
     
     def listener_callback(self, msg):
+    
         self.get_logger().info(f'I heard: "{msg.data}"')
 
 def main(args=None):
@@ -230,14 +247,19 @@ def main(args=None):
     node = SimpleSubscriber()
     
     try:
+    
         rclpy.spin(node)
+        
     except KeyboardInterrupt:
+    
         pass
     
     node.destroy_node()
+    
     rclpy.shutdown()
 
 if __name__ == '__main__':
+
     main()
 
 
