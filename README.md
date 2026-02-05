@@ -337,3 +337,18 @@ Practice Platforms:
 The Construct ROS 2 Courses
 
 ROS 2 Tutorials by Turtlesim
+
+🎉 Congratulations!
+You've completed Week 1 of ROS 2 Humble! You now understand:
+
+What ROS 2 is and why it's important
+
+How to install and verify ROS 2 Humble
+
+Basic ROS 2 concepts and commands
+
+How to create simple publisher/subscriber nodes
+
+Next Week: We'll dive into creating ROS 2 packages and workspaces!
+
+
