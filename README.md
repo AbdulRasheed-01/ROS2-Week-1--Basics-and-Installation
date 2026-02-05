@@ -317,3 +317,23 @@ chmod +x your_script.py
 📚 Additional Resources
 
 Official Documentation:
+
+ROS 2 Humble Documentation
+
+ROS 2 Tutorials
+
+ROS 2 CLI Tools
+
+Recommended Reading:
+
+ROS 2 Design Article
+
+Understanding DDS
+
+ROS 2 Architecture
+
+Practice Platforms:
+
+The Construct ROS 2 Courses
+
+ROS 2 Tutorials by Turtlesim
