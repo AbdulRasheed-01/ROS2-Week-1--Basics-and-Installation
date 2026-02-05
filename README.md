@@ -281,3 +281,9 @@ ros2 topic list
 
 ros2 topic echo /temperature_data
 
+🔍 Troubleshooting Common Issues
+Issue 1: "Command not found: ros2"
+
+
+
+
