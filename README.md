@@ -292,5 +292,16 @@ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
 source ~/.bashrc
 
+Issue 2: "Could not find package"
+# Update package lists
+sudo apt update
+
+# Clear ROS 2 cache
+unset ROS_DISTRO
+
+unset ROS_VERSION
+
+source /opt/ros/humble/setup.bash
+
 
 
