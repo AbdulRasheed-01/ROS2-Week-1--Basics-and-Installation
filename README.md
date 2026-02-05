@@ -293,6 +293,7 @@ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 Issue 2: "Could not find package"
+
 # Update package lists
 sudo apt update
 
@@ -303,5 +304,14 @@ unset ROS_VERSION
 
 source /opt/ros/humble/setup.bash
 
+Issue 3: "Permission denied" for Python scripts
+
+# Make Python scripts executable
+
+chmod +x your_script.py
+
+# Add shebang line at top:
+
+#!/usr/bin/env python3
 
 
