@@ -272,3 +272,12 @@ python3 simple_publisher.py
 
 # Terminal 2: Run subscriber
 python3 simple_subscriber.py
+
+# Terminal 3: Logger
+python3 temperature_logger.py
+
+# Terminal 4: Monitor topics
+ros2 topic list
+
+ros2 topic echo /temperature_data
+
