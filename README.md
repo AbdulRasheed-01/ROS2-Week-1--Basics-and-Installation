@@ -284,6 +284,13 @@ ros2 topic echo /temperature_data
 🔍 Troubleshooting Common Issues
 Issue 1: "Command not found: ros2"
 
+# Source ROS 2 setup
+source /opt/ros/humble/setup.bash
+
+# Or add to .bashrc permanently
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+
+source ~/.bashrc
 
 
 
